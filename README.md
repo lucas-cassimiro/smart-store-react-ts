@@ -1,7 +1,5 @@
 <h1 align="center"><strong>Projeto Smart Store</strong></h1>
-<p>O projeto Smart Store foi criado e desenvolvido por Lucas Cassimiro. Este projeto é um E-Commerce feito com as ferramentas: ReactJs, TypeScript, Styled-components, Context API e controle de versão GIT. O projeto conta com um design moderno e intuitivo, visando uma ótima experiência do usuário. Fácil de mexer, o projeto conta com funcionalidades como: carrosséis de itens, filtrar de itens por preço, cor e armazenamento, carrinho de compras e busca por CEP e cálculo automático de frete.
-O projeto foi desenvolvido com responsividade, para telas abaixo de 1920px.
-OBS: O responsivo foi feito para as telas MAIS utilizadas, apenas alguns tamanhos de tela não foram definidos!</p>
+<p>O projeto Smart Store foi criado e desenvolvido por Lucas Cassimiro. Este projeto é um E-Commerce feito com as ferramentas: ReactJs, TypeScript, Styled-components, Context API e controle de versão GIT. O projeto conta com um design moderno e intuitivo, visando uma ótima experiência do usuário. Fácil de mexer, o projeto conta com funcionalidades como: carrosséis de itens, filtrar de itens por preço, cor e armazenamento, carrinho de compras e busca por CEP e cálculo automático de frete.</p>
 <br>
 
 <h2>🌐 Visão Geral do Projeto</h2>
@@ -20,7 +18,7 @@ OBS: O responsivo foi feito para as telas MAIS utilizadas, apenas alguns tamanho
 <br>
 
 <h2>🛒 Carrinho de compras</h2>
-<p>O carrinho de compras permite armazenar os itens que o usuário se interessou ou pretende comprar. É possível adicionar, editar ou remover o produto do carrinho. Caso o usuário recarregue a página, os itens do carrinho não serão perdidos, pois a informação está sendo salva pelo Local Storage do navegador. O acúmulo de valor é somado de acordo com o desconto do produto, caso ele esteja na black friday ou não, foi desenvolvido um sistema à partir disso, para que o cálculo seja feito com o valor de desconto do produto.</p>
+<p>O carrinho de compras permite armazenar os itens que o usuário se interessou ou pretende comprar. É possível adicionar, editar ou remover o produto do carrinho. O acúmulo de valor é somado de acordo com o desconto do produto, caso ele esteja na black friday ou não. Foi desenvolvido um sistema à partir disso, para que o cálculo seja feito com o valor de desconto do produto.</p>
 
 ![Carrinho de compras](./src/assets/cart.gif)
 
@@ -45,7 +43,7 @@ OBS: O responsivo foi feito para as telas MAIS utilizadas, apenas alguns tamanho
 
 <h2>🛠️ Ferramentas Utilizadas</h2>
 
-- ReactJs
+- React
 - TypeScript
 - Styled-components
 - Context API
