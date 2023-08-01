@@ -44,10 +44,15 @@ export function CardSlider({ products }: ProductsProps) {
         slidesPerView: 3,
       },
       1200: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         pagination: false,
         spaceBetween: 1,
       },
+      1350: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        pagination: false,
+      }
     },
   }
 

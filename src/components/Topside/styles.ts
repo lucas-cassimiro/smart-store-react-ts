@@ -160,7 +160,7 @@ export const Container = styled.header<LocationProps>`
       h1 a {
         -webkit-text-stroke: 1px #074291;
         font-family: 'Lobster';
-        width: 300px;
+        min-width: 300px;
         color: #fff;
         font-style: normal;
         font-weight: 400;
@@ -173,6 +173,10 @@ export const Container = styled.header<LocationProps>`
 
         @media (max-width: 550px) {
           font-size: 25px;
+        }
+
+        @media (max-width: 420px) {
+         // font-size: 22px;
         }
       }
     }
