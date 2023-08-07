@@ -29,7 +29,9 @@ export function NewsSlider({ products }: NewsProps) {
       700: {
         slidesPerView: 2,
         spaceBetween: 41,
-        pagination: false,
+      },
+      990: {
+        pagination: true,
       },
       1024: {
         slidesPerView: 3,

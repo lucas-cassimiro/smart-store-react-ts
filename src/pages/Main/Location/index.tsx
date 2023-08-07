@@ -48,7 +48,7 @@ export default function Locationn() {
       </form>
 
       {Object.keys(cep).length > 0 && !error ? (
-        <ul>
+        <ol>
           <li>
             <p>{cep.logradouro}</p>
           </li>
@@ -74,7 +74,7 @@ export default function Locationn() {
               </p>
             </li>
           ) : null}
-        </ul>
+        </ol>
       ) : null}
     </Container>
   )

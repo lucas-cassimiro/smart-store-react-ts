@@ -12,6 +12,7 @@ export const Container = styled.div`
     text-align: center;
     input {
      margin-top: 10px;
+     margin-bottom: 20px;
     }
   }
 

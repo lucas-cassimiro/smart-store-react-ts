@@ -1,12 +1,6 @@
-import styled, { css }from 'styled-components';
+import { styled } from 'styled-components'
 
-interface LocationProps {
-  location: boolean
-  sidebar: boolean
-}
-
-
-export const Container = styled.header<LocationProps>`
+export const Container = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +35,17 @@ export const Container = styled.header<LocationProps>`
       width: 40%;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 500px) {
+      p {
+        font-size: 0.7rem;
+      }
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 430px) {
       p {
         font-size: 0.5rem;
       }
@@ -50,26 +54,16 @@ export const Container = styled.header<LocationProps>`
         font-size: 0.6rem;
       }
     }
-
-    @media (max-width: 360px) {
-      p {
-        font-size: 0.45rem;
-      }
-
-      a {
-        font-size: 0.5rem;
-        width: 38%;
-      }
-    }
   }
 
   > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: #313131;
     height: 3.5625rem;
-    align-items: center;
+    position: relative;
 
     > div:first-child {
       color: #a0a0a0;
@@ -83,41 +77,27 @@ export const Container = styled.header<LocationProps>`
         display: none;
       }
 
-      ${({ location }) =>
-        location &&
-        css`
-          aside {
-            display: flex;
-            background-color: #313131;
-            position: fixed;
-            height: 100%;
-            top: 0px;
-            left: 0px;
-            width: 255px;
-            animation: showSidebar 0.4s;
-            z-index: 9999;
+      aside {
+        display: flex;
+        background-color: #313131;
+        position: fixed;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        width: 255px;
+        animation: showSidebar 0.4s;
+        z-index: 9999;
 
-            svg {
-              position: fixed;
-              color: white;
-              height: 30px;
-              display: flex;
-              margin-top: 25px;
-              margin-left: 40px;
-              cursor: pointer;
-            }
-
-            @keyframes showSidebar {
-              from {
-                opacity: 0;
-                width: 0;
-              }
-              to {
-                opacity: 1;
-              }
-            }
-          }
-        `}
+        svg {
+          position: fixed;
+          color: white;
+          height: 30px;
+          display: flex;
+          margin-top: 25px;
+          margin-left: 40px;
+          cursor: pointer;
+        }
+      }
 
       a {
         color: #a0a0a0;
@@ -130,12 +110,30 @@ export const Container = styled.header<LocationProps>`
         width: 15px;
       }
 
-      @media (max-width: 420px) {
+      @media (max-width: 768px) {
+        display: none;
+
+        aside {
+          display: none;
+        }
+      }
+
+      @media (max-width: 675px) {
+        margin-left: 0.5rem;
+        align-items: center;
+
+        img {
+          height: 17px;
+          width: 12px;
+        }
+      }
+
+      @media (max-width: 500px) {
         margin-left: 0.5rem;
         align-items: center;
 
         a {
-          font-size: 10px;
+          font-size: 13px;
         }
 
         img {
@@ -143,41 +141,49 @@ export const Container = styled.header<LocationProps>`
           width: 12px;
         }
       }
+
+      @media (max-width: 420px) {
+        a {
+          font-size: 10px;
+        }
+      }
     }
 
-    div:nth-child(2) {
-      position: relative;
-      width: 33.3%;
-      text-align: center;
-      z-index: 999;
+    // div:nth-child(2) {
+    //   position: relative;
+    //   width: 33.3%;
+    //   text-align: center;
+    //   z-index: 999;
 
-      h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // width: 100%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    h1 a {
+      -webkit-text-stroke: 1px #074291;
+      // background: red;
+      font-family: 'Lobster';
+      color: #fff;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 30px;
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        font-size: 35px;
       }
 
-      h1 a {
-        -webkit-text-stroke: 1px #074291;
-        font-family: 'Lobster';
-        min-width: 300px;
-        color: #fff;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 30px;
-
-        @media (max-width: 1024px) {
-          font-size: 35px;
-        }
-
-        @media (max-width: 550px) {
-          font-size: 25px;
-        }
-
-        @media (max-width: 420px) {
-         // font-size: 22px;
-        }
+      @media (max-width: 430px) {
+        font-size: 30px;
       }
     }
 
@@ -212,17 +218,17 @@ export const Container = styled.header<LocationProps>`
         position: relative;
       }
 
-      @media (max-width: 420px) {
-        margin-right: 0.2rem;
-
-        img {
-          width: 1.1rem;
-        }
+      @media (max-width: 768px) {
+        width: 0;
       }
     }
   }
 
   nav {
+    > div {
+      display: none;
+    }
+
     width: 100%;
     background-color: #313131;
     border-top: 0.0625rem solid;
@@ -240,34 +246,34 @@ export const Container = styled.header<LocationProps>`
         display: none;
       }
 
-      ${({ sidebar }) =>
-        sidebar &&
-        css`
-          aside {
-            display: flex;
-            flex-direction: column;
-            background-color: #313131;
-            position: fixed;
-            height: 100%;
-            top: 0px;
-            left: 0px;
-            width: 255px;
-            animation: showSidebar 0.4s;
-            z-index: 999;
+      aside {
+        display: flex;
+        flex-direction: column;
+        background-color: #313131;
+        position: fixed;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        width: 255px;
+        animation: showSidebar 0.4s;
+        z-index: 999;
 
-            svg {
-              color: #ffffff;
-              height: 30px;
-              display: flex;
-              margin-top: 25px;
-              margin-left: 40px;
-              cursor: pointer;
-            }
-          }
-          ul {
-            display: block;
-          }
-        `}
+        svg {
+          color: #ffffff;
+          height: 30px;
+          display: flex;
+          margin-top: 25px;
+          margin-left: 40px;
+          cursor: pointer;
+        }
+
+        @media (max-width: 500px) {
+          width: 200px;
+        }
+      }
+      ul {
+        display: block;
+      }
     }
 
     ul {
@@ -291,9 +297,62 @@ export const Container = styled.header<LocationProps>`
     }
 
     @media (max-width: 768px) {
+      > div {
+        display: flex;
+        gap: 8px;
+        margin-left: 20px;
+        color: #a0a0a0;
+
+        aside {
+          display: flex;
+          background-color: #313131;
+          position: fixed;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          width: 255px;
+          animation: showSidebar 0.4s;
+          z-index: 9999;
+
+          svg {
+            position: fixed;
+            color: white;
+            height: 30px;
+            display: flex;
+            margin-top: 25px;
+            margin-left: 40px;
+            cursor: pointer;
+          }
+
+          @media (max-width: 500px) {
+            //  width: 200px;
+          }
+        }
+
+        a {
+          color: #a0a0a0;
+          cursor: pointer;
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        @media (max-width: 550px) {
+          a {
+            font-size: 13px;
+          }
+        }
+
+        @media (max-width: 330px) {
+          a {
+            font-size: 10px;
+          }
+        }
+      }
+
       height: 2rem;
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       ul {
         display: none;
@@ -302,6 +361,7 @@ export const Container = styled.header<LocationProps>`
       button {
         display: flex;
         align-items: center;
+        margin-right: 20px;
       }
     }
   }

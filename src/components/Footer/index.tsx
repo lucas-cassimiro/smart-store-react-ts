@@ -72,6 +72,7 @@ export default function Footer() {
         </div>
       </ul>
 
+
       <div>
         <h2>Sac 4002-8922</h2>
         <span>Segunda a sexta das 08h às 20h</span>
@@ -89,6 +90,7 @@ export default function Footer() {
         <h3>App Smart fidelidade</h3>
         <img src={IconBaixeAqui} alt='Ícone do Baixe Aqui' />
       </div>
+
     </Container>
   )
 }

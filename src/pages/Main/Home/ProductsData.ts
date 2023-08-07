@@ -66,7 +66,7 @@ export const products = [
     id: 7,
     name: 'Smartphone Samsung Galaxy M53',
     price: 2850.14,
-    discount: 48,
+    discount: 20,
     blackFriday: true,
     img: ProductSmartphone,
     rating: 4,

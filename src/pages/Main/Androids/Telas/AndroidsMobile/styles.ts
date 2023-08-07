@@ -1,10 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-interface ContainerProps {
-  isVisible: boolean
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
   > p {
     width: 100%;
     padding: 32px 40px;
@@ -63,52 +59,48 @@ export const Container = styled.div<ContainerProps>`
     }
   }
 
-  ${({ isVisible }) =>
-    isVisible &&
-    css`
-      > div {
-        div {
-          display: block;
+  > div {
+    div {
+      display: block;
 
-          label {
-            display: flex;
-          }
+      label {
+        display: flex;
+      }
 
-          @media (max-width: 420px) {
-            svg {
-              margin-left: 155px;
-            }
-          }
+      @media (max-width: 420px) {
+        svg {
+          margin-left: 155px;
+        }
+      }
+    }
+  }
+
+  > div {
+    div {
+      background-color: #313131;
+      position: fixed;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      width: 255px;
+      animation: showSidebar 0.4s;
+      z-index: 1;
+
+      @keyframes showSidebar {
+        from {
+          opacity: 0;
+          width: 0;
+        }
+        to {
+          opacity: 1;
         }
       }
 
-      > div {
-        div {
-          background-color: #313131;
-          position: fixed;
-          height: 100%;
-          top: 0px;
-          left: 0px;
-          width: 255px;
-          animation: showSidebar 0.4s;
-          z-index: 1;
-
-          @keyframes showSidebar {
-            from {
-              opacity: 0;
-              width: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-
-          @media (max-width: 420px) {
-            width: 200px;
-          }
-        }
+      @media (max-width: 420px) {
+        width: 200px;
       }
-    `}
+    }
+  }
 `
 
 export const Content = styled.section`

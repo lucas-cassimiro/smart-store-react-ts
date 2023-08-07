@@ -40,14 +40,14 @@ export const SwiperContainer = styled(Swiper)`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .swiper-pagination {
       margin-top: 10px;
     }
 
     &.swiper-pagination-bullet,
     span {
-      width: 50px;
+      width: 60px;
       height: 6px;
     }
   }

@@ -17,7 +17,7 @@ export default function Slider({ settings, children }: SliderProps) {
   return (
     <SwiperContainer modules={[Navigation, Pagination, A11y]} {...settings}>
       {children}
-      <SliderButton/>
+      <SliderButton />
     </SwiperContainer>
   )
 }

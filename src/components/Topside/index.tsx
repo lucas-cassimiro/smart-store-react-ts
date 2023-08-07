@@ -24,7 +24,7 @@ export default function Header() {
   const showLocation = () => setLocation(!location)
 
   return (
-    <Container location={location} sidebar={sidebar}>
+    <Container>
       <div>
         <p>
           A melhor franquia de smartphones do<span>Brasil</span>
@@ -39,16 +39,17 @@ export default function Header() {
 
           <a onClick={showLocation}>Selecione uma localização</a>
 
-          <aside>
-            <FaTimes onClick={showLocation} />
-            <Locationn />
-          </aside>
+          {location && (
+            <aside>
+              <FaTimes onClick={showLocation} />
+              <Locationn />
+            </aside>
+          )}
         </div>
-        <div>
-          <h1>
-            <Link to={'/'}>Smart Store</Link>
-          </h1>
-        </div>
+
+        <h1>
+          <Link to={'/'}>Smart Store</Link>
+        </h1>
 
         <div>
           <Link to={'/carrinho-de-compras'}>
@@ -61,12 +62,26 @@ export default function Header() {
       </div>
 
       <nav>
+        <div>
+          <img src={IconLocation} alt='Icone de localização' />
+
+          <a onClick={showLocation}>Selecione uma localização</a>
+
+          {location && (
+            <aside>
+              <FaTimes onClick={showLocation} />
+              <Locationn />
+            </aside>
+          )}
+        </div>
         <button>
           <FaBars onClick={showSidebar} />
-          <aside>
-            <FaTimes onClick={showSidebar} />
-            <Sidebar />
-          </aside>
+          {sidebar && (
+            <aside>
+              <FaTimes onClick={showSidebar} />
+              <Sidebar />
+            </aside>
+          )}
         </button>
         <ul>
           <li>

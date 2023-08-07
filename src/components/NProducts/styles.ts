@@ -65,6 +65,10 @@ export const Container = styled.div`
     }
   }
 
+  @media (max-width: 990px){
+    margin-right: 0;
+  }
+
   @media (max-width: 768px) {
     div {
       img {

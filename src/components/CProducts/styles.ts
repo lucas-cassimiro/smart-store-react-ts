@@ -11,19 +11,27 @@ export const Container = styled.div`
   margin-bottom: 15px;
 
   @media (max-width: 1410px) {
-   margin-left: -10px;
+    margin-left: -10px;
   }
 
-  @media (max-width: 1356px){
-   margin-left: -10.1px;
+  @media (max-width: 1349px) {
+    margin-left: 40px;
   }
 
-  @media (max-width: 980px){
-    margin-left: 0;
-    margin-right: 30px;
+  @media (max-width: 1201px) {
+    margin-left: 10px;
   }
 
-  @media (max-width: 420px){
+  @media (max-width: 1105px) {
+    margin-left: -10px;
+  }
+
+  // @media (max-width: 980px){
+  //   margin-left: 0;
+  //   margin-right: 30px;
+  // }
+
+  @media (max-width: 420px) {
     height: 330px;
   }
 
@@ -32,10 +40,15 @@ export const Container = styled.div`
     object-fit: contain;
     margin-bottom: 15px;
 
-    @media (max-width: 500px) {
+    @media (max-width: 570px) {
       width: 200px;
       height: 120px;
     }
+
+    // @media (max-width: 579px) {
+    //   width: 220px;
+    //   height: 140px;
+    // }
   }
 
   > div {
@@ -62,6 +75,18 @@ export const Container = styled.div`
       p:last-child {
         background: #313131;
         font-size: 1rem;
+      }
+
+      @media (max-width: 593px) {
+        display: block;
+      }
+
+      > p {
+        width: 80px;
+      }
+
+      p:last-child {
+        width: 150px;
       }
     }
 
@@ -107,8 +132,12 @@ export const Container = styled.div`
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #E03131;
+          background-color: #e03131;
         }
+      }
+
+      @media (max-width: 533px) {
+        width: 170px;
       }
     }
 
