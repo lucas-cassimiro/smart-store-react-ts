@@ -55,6 +55,6 @@
 - Controle de versão GIT
 - [CEP API](https://viacep.com.br/)
 
-💻 Página do projeto -  [Projeto Smart Store](https://smart-store-react-iyhkgzjbh-lucas-cassimiro.vercel.app/)
+💻 Página do projeto -  [Projeto Smart Store](https://smart-store-react-g4jzzy8bp-lucas-cassimiro.vercel.app/)
 
 🙋‍♂️ Perfil no LinkedIn - [Lucas Cassimiro](https://www.linkedin.com/in/lucasocassimiro/)
