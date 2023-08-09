@@ -19,15 +19,15 @@ export function CardSlider({ products }: ProductsProps) {
     },
     breakpoints: {
       320: {
-        spaceBetween: 50,
-        slidesPerView: 1,
+        spaceBetween: 1,
+        slidesPerView: 2,
       },
       420: {
-        spaceBetween: 30,
-        slidesPerView: 1,
+        spaceBetween: 1,
+        slidesPerView: 2,
       },
-      500 : {
-        spaceBetween: 30,
+      430 : {
+        spaceBetween: 1,
         slidesPerView: 2,
       },
       768: {
