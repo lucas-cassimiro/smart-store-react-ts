@@ -40,7 +40,7 @@
 <br>
 
 <h2>Rodando o projeto na sua máquina</h2>
-<p>Para rodar o projeto na sua máquina, basta clicar no botão verde no começo do repositório "<> Code" e baixar o arquivo ZIP. Em seguida, você pode baixar as dependências do projeto usando o comando "npm install" no seu terminal, já dentro do projeto.</p>
+<p>Para rodar o projeto na sua máquina, basta clicar no botão verde no começo do repositório "<> Code", baixar o arquivo ZIP e extrair para uma pasta. Em seguida, você pode baixar as dependências do projeto usando o comando "npm install" no seu terminal, já dentro do projeto.</p>
 
 <h2>Conclusão</h2>
 <p>O Projeto Smart Store me proporcionou uma evolução incrível, trazendo experiência com a ferramenta ReactJs e ajudando a trabalhar minha lógica com TypeScript. Muitos medos e inseguranças foram enfrentados ao construir esse projeto, muitas coisas novas também foram aprendidas, principalmente programação orientada à objetos e manipulação de dados. Foi muito desafiador desenvolver este projeto e valeu a pena cada momento investido em sua construção.</p>
@@ -55,6 +55,6 @@
 - Controle de versão GIT
 - [CEP API](https://viacep.com.br/)
 
-💻 Página do projeto -  [Projeto Smart Store](https://smart-store-react-g4jzzy8bp-lucas-cassimiro.vercel.app/)
+💻 Página do projeto -  [Projeto Smart Store](https://smart-store-react-5zll440a2-lucas-cassimiro.vercel.app/)
 
 🙋‍♂️ Perfil no LinkedIn - [Lucas Cassimiro](https://www.linkedin.com/in/lucasocassimiro/)
