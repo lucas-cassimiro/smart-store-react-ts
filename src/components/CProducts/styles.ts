@@ -7,8 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-left: 30px;
-  height: 380px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 
   @media (max-width: 1410px) {
     margin-left: -10px;
@@ -28,10 +28,6 @@ export const Container = styled.div`
 
   @media (max-width: 485px) {
     margin-left: -30px;
-  }
-
-  @media (max-width: 420px) {
-    height: 330px;
   }
 
   img {
@@ -88,6 +84,10 @@ export const Container = styled.div`
         width: 150px;
       }
 
+      @media (max-width: 525px) {
+        min-width: 122px;
+      }
+
       @media (max-width: 486px) {
         > p {
           font-size: 13px;
@@ -99,6 +99,7 @@ export const Container = styled.div`
           width: 130px;
         }
       }
+
     }
 
     h4 {

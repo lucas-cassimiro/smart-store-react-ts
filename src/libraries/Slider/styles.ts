@@ -41,7 +41,7 @@ export const SwiperContainer = styled(Swiper)`
     padding: 0;
 
     .swiper-pagination {
-      margin-top: 40px;
+      margin-top: 20px;
       position: relative;
     }
   }

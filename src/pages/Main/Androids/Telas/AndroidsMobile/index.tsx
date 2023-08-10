@@ -1,3 +1,6 @@
+import isValidProp from '@emotion/is-prop-valid'
+import { StyleSheetManager } from 'styled-components'
+
 import { useState, useEffect, ChangeEvent } from 'react'
 
 import { Celulares, Container, Content } from './styles'
@@ -31,7 +34,7 @@ export default function AndroidsMobile({ androids }: ProductProps) {
   const [name, setName] = useState<string>('')
   const [products, setProducts] = useState<PagesProductsData[]>([])
 
-  const [showFilter, setShowFilter] = useState<boolean>(false)
+  const [showFilter, setShowFilter] = useState(false)
   const filterOn = () => setShowFilter(!showFilter)
 
   const handleChangePrice = (e: ChangeEvent<HTMLInputElement>) => {
@@ -138,17 +141,17 @@ export default function AndroidsMobile({ androids }: ProductProps) {
   }, [price, storage, color, order, display, name])
 
   return (
-    <Container>
-      <Head title='Androids' />
-      <p>
-        <strong>Você está em: </strong>Androids
-      </p>
-      <div>
-        <button>
-          <li onClick={filterOn}>Filtrar ↑↓</li>
-        </button>
+    <StyleSheetManager shouldForwardProp={isValidProp}>
+      <Container isvisible={showFilter ? 1 : 0}>
+        <Head title='Androids' />
+        <p>
+          <strong>Você está em: </strong>Androids
+        </p>
+        <div>
+          <button>
+            <li onClick={filterOn}>Filtrar ↑↓</li>
+          </button>
 
-        {showFilter && (
           <div>
             <section>
               <FaTimes onClick={filterOn} />
@@ -252,53 +255,52 @@ export default function AndroidsMobile({ androids }: ProductProps) {
               Dourado
             </label>
           </div>
-        )}
+          <Content>
+            <label htmlFor='order'>Ordenar</label>
+            <select name='order' id='order' onChange={(e) => setOrder(e.target.value)}>
+              <option value=''>Selecione uma categoria</option>
+              <option value='procurados'>Mais procurados</option>
+              <option value='recentes'>Mais recentes</option>
+              <option value='vendidos'>Mais vendidos</option>
+            </select>
+            <label htmlFor='exibir'>Exibir</label>
+            <select name='exibir' id='exibir' onChange={(e) => setDisplay(e.target.value)}>
+              <option value='20'>20 por página</option>
+              <option value='19'>19 por página</option>
+              <option value='18'>18 por página</option>
+              <option value='17'>17 por página</option>
+              <option value='16'>16 por página</option>
+              <option value='15'>15 por página</option>
+              <option value='14'>14 por página</option>
+              <option value='13'>13 por página</option>
+              <option value='12'>12 por página</option>
+              <option value='11'>11 por página</option>
+              <option value='10'>10 por página</option>
+              <option value='9'>9 por página</option>
+              <option value='8'>8 por página</option>
+              <option value='7'>7 por página</option>
+              <option value='6'>6 por página</option>
+              <option value='5'>5 por página</option>
+              <option value='4'>4 por página</option>
+              <option value='3'>3 por página</option>
+              <option value='2'>2 por página</option>
+              <option value='1'>1 por página</option>
+            </select>
+            <input
+              type='text'
+              placeholder='Pesquisar na categoria'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </Content>
+        </div>
 
-        <Content>
-          <label htmlFor='order'>Ordenar</label>
-          <select name='order' id='order' onChange={(e) => setOrder(e.target.value)}>
-            <option value=''>Selecione uma categoria</option>
-            <option value='procurados'>Mais procurados</option>
-            <option value='recentes'>Mais recentes</option>
-            <option value='vendidos'>Mais vendidos</option>
-          </select>
-          <label htmlFor='exibir'>Exibir</label>
-          <select name='exibir' id='exibir' onChange={(e) => setDisplay(e.target.value)}>
-            <option value='20'>20 por página</option>
-            <option value='19'>19 por página</option>
-            <option value='18'>18 por página</option>
-            <option value='17'>17 por página</option>
-            <option value='16'>16 por página</option>
-            <option value='15'>15 por página</option>
-            <option value='14'>14 por página</option>
-            <option value='13'>13 por página</option>
-            <option value='12'>12 por página</option>
-            <option value='11'>11 por página</option>
-            <option value='10'>10 por página</option>
-            <option value='9'>9 por página</option>
-            <option value='8'>8 por página</option>
-            <option value='7'>7 por página</option>
-            <option value='6'>6 por página</option>
-            <option value='5'>5 por página</option>
-            <option value='4'>4 por página</option>
-            <option value='3'>3 por página</option>
-            <option value='2'>2 por página</option>
-            <option value='1'>1 por página</option>
-          </select>
-          <input
-            type='text'
-            placeholder='Pesquisar na categoria'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </Content>
-      </div>
-
-      <Celulares>
-        {products.length >= 1 &&
-          products.map((product) => <CardProducts product={product} key={product.id} />)}
-        {products.length == 0 && <p>🔍 Ops! Produto não encontrado</p>}
-      </Celulares>
-    </Container>
+        <Celulares>
+          {products.length >= 1 &&
+            products.map((product) => <CardProducts product={product} key={product.id} />)}
+          {products.length == 0 && <p>🔍 Ops! Produto não encontrado</p>}
+        </Celulares>
+      </Container>
+    </StyleSheetManager>
   )
 }

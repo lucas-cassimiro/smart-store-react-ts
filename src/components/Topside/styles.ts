@@ -149,17 +149,10 @@ export const Container = styled.header`
       }
     }
 
-    // div:nth-child(2) {
-    //   position: relative;
-    //   width: 33.3%;
-    //   text-align: center;
-    //   z-index: 999;
-
     h1 {
       display: flex;
       align-items: center;
       justify-content: center;
-      // width: 100%;
 
       @media (max-width: 768px) {
         width: 100%;
@@ -168,7 +161,6 @@ export const Container = styled.header`
 
     h1 a {
       -webkit-text-stroke: 1px #074291;
-      // background: red;
       font-family: 'Lobster';
       color: #fff;
       font-style: normal;
@@ -220,6 +212,10 @@ export const Container = styled.header`
 
       @media (max-width: 768px) {
         width: 0;
+
+        section {
+          left: -5px;
+        }
       }
     }
   }
@@ -323,10 +319,6 @@ export const Container = styled.header`
             margin-left: 40px;
             cursor: pointer;
           }
-
-          @media (max-width: 500px) {
-            //  width: 200px;
-          }
         }
 
         a {
@@ -361,7 +353,7 @@ export const Container = styled.header`
       button {
         display: flex;
         align-items: center;
-        margin-right: 20px;
+        margin-right: 1.3rem;
       }
     }
   }

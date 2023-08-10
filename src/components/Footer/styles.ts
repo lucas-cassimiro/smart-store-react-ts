@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
   width: 100%;
-  max-height: 20rem;
+  max-height: 22rem;
   background-color: #dcdcdc;
   display: flex;
   justify-content: space-around;
@@ -52,12 +52,17 @@ export const Container = styled.footer`
         }
       }
     }
+
+    // @media (max-width: 1177px) {
+    //   div {
+    //     width: 400px;
+    //   }
+    // }
   }
 
   div:nth-child(3) {
     display: flex;
     flex-direction: column;
-   // background: green;
     height: 100px;
 
     h2 {

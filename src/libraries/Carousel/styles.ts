@@ -40,6 +40,18 @@ export const SwiperContainer = styled(Swiper)`
     }
   }
 
+  @media (max-width: 600px) {
+    .swiper-pagination {
+      margin-top: 20px;
+    }
+
+    &.swiper-pagination-bullet,
+    span {
+      width: 80px;
+      height: 8px;
+    }
+  }
+
   @media (max-width: 500px) {
     .swiper-pagination {
       margin-top: 10px;

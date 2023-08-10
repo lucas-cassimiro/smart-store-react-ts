@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
+interface ContainerProps {
+  isvisible: number
+}
+
+export const Container = styled.div<ContainerProps>`
   > p {
     width: 100%;
     padding: 32px 40px;
@@ -22,84 +26,59 @@ export const Container = styled.div`
       font-size: 0.9375rem;
     }
 
-    div {
+    > div {
       display: none;
-
-      section {
-        width: 255px;
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 25px;
-
-        svg {
-          color: #fff;
-          height: 30px;
-          margin-top: 15px;
-          cursor: pointer;
-        }
-      }
-
-      h3:nth-child(2) {
-        text-align: center;
-        color: #fff;
-        margin-top: 10px;
-      }
-
-      > h3 {
-        color: #fff;
-        margin-bottom: 10px;
-        margin-top: 15px;
-        margin-left: 15px;
-      }
-
-      label {
-        color: white;
-        gap: 7px;
-      }
     }
-  }
 
-  > div {
-    div {
-      display: block;
+    ${({ isvisible }) =>
+      isvisible
+        ? css`
+            > div {
+              display: flex;
+              flex-direction: column;
+              background-color: #313131;
+              position: fixed;
+              height: 100%;
+              top: 0px;
+              left: 0px;
+              width: 255px;
+              animation: showSidebar 0.4s;
+              z-index: 1;
 
-      label {
-        display: flex;
-      }
+              section {
+                width: 255px;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 25px;
 
-      @media (max-width: 420px) {
-        svg {
-          margin-left: 155px;
-        }
-      }
-    }
-  }
+                svg {
+                  color: #fff;
+                  height: 30px;
+                  margin-top: 15px;
+                  cursor: pointer;
+                }
+              }
 
-  > div {
-    div {
-      background-color: #313131;
-      position: fixed;
-      height: 100%;
-      top: 0px;
-      left: 0px;
-      width: 255px;
-      animation: showSidebar 0.4s;
-      z-index: 1;
+              h3:nth-child(2) {
+                text-align: center;
+                color: #fff;
+                margin-top: 10px;
+              }
 
-      @keyframes showSidebar {
-        from {
-          opacity: 0;
-          width: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
+              > h3 {
+                color: #fff;
+                margin-bottom: 10px;
+                margin-top: 15px;
+                margin-left: 15px;
+              }
 
-      @media (max-width: 420px) {
-        width: 200px;
-      }
-    }
+              label {
+                color: white;
+                gap: 7px;
+              }
+            }
+          `
+        : css``}
   }
 `
 
@@ -153,5 +132,13 @@ export const Celulares = styled.aside`
     text-align: center;
     height: 150px;
     margin-top: 50px;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 `
