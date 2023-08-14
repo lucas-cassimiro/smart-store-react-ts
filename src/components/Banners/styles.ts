@@ -9,17 +9,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 1366px) {
-    margin-left: 80px;
-    margin-right: 80px;
-  }
-
-  @media (max-width: 1024px) {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  @media (max-width: 420px) {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 `

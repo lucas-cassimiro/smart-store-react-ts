@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.footer`
   width: 100%;
-  max-height: 22rem;
+  height: 22rem;
   background-color: #dcdcdc;
   display: flex;
   justify-content: space-around;
@@ -13,7 +13,7 @@ export const Container = styled.footer`
   ul:first-child {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 35px;
 
     li {
       border-bottom: 1px solid rgba(49, 49, 49, 0.5);
@@ -29,9 +29,10 @@ export const Container = styled.footer`
   }
 
   ul:nth-child(2) {
+    width: 533px;
     div {
       border-bottom: 1px solid rgba(49, 49, 49, 0.5);
-      width: 533px;
+      min-width: 250px;
 
       h1 {
         font-weight: 600;
@@ -53,17 +54,38 @@ export const Container = styled.footer`
       }
     }
 
-    // @media (max-width: 1177px) {
-    //   div {
-    //     width: 400px;
-    //   }
-    // }
+    @media (max-width: 990px) {
+      width: 300px;
+    }
   }
 
   div:nth-child(3) {
     display: flex;
     flex-direction: column;
     height: 100px;
+
+    > div {
+      display: none;
+      margin-top: 20px;
+
+      h2 {
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        margin-bottom: 16px;
+      }
+
+      div {
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 8px;
+          margin-bottom: 16px;
+          margin-left: 8px;
+        }
+      }
+    }
 
     h2 {
       margin-bottom: 16px;
@@ -72,9 +94,21 @@ export const Container = styled.footer`
     span {
       margin-bottom: 8px;
     }
+
+    @media (max-width: 1210px) {
+      > div {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      > div {
+        display: none;
+      }
+    }
   }
 
-  div:last-child {
+  .social-media {
     h2 {
       margin-bottom: 16px;
     }
@@ -92,13 +126,21 @@ export const Container = styled.footer`
         margin-left: 8px;
       }
     }
+
+    @media (max-width: 1210px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   @media (max-width: 1024px) {
     justify-content: space-between;
     ul:first-child {
       li {
-        width: 140px;
+        width: 150px;
 
         a {
           font-size: 20px;
@@ -108,25 +150,26 @@ export const Container = styled.footer`
 
     ul:nth-child(2) {
       div {
-        width: 400px;
+        width: 500px;
 
         h1 {
-          font-size: 18px;
+          font-size: 20px;
         }
 
         a {
-          font-size: 14px;
+          font-size: 1rem;
         }
       }
     }
 
     div:nth-child(3) {
+      margin-right: 16px;
       h2 {
-        font-size: 18px;
+        font-size: 20px;
       }
 
       span {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
 
@@ -153,7 +196,7 @@ export const Container = styled.footer`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 990px) {
     ul:nth-child(2) {
       div {
         width: 140px;
@@ -166,7 +209,7 @@ export const Container = styled.footer`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 768px) {
     padding: 32px 0;
     height: 23rem;
     justify-content: space-around;
@@ -185,14 +228,13 @@ export const Container = styled.footer`
 
     div:nth-child(3) {
       display: flex;
-      align-self: center;
 
       span {
         width: 150px;
       }
     }
 
-    div:last-child {
+    .social-media {
       display: flex;
       flex-direction: column;
       align-items: center;

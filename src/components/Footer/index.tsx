@@ -72,14 +72,24 @@ export default function Footer() {
         </div>
       </ul>
 
-
       <div>
         <h2>Sac 4002-8922</h2>
         <span>Segunda a sexta das 08h às 20h</span>
         <span>Sábados das 08h às 19h</span>
+        <div>
+          <h2>Redes sociais</h2>
+          <div>
+            <img src={LogoFacebook} alt='Logo do Facebook' />
+            <img src={LogoInstagram} alt='Logo do Instagram' />
+            <img src={LogoTwitter} alt='Logo do Twitter' />
+            <img src={LogoTiktok} alt='Logo do Tiktok' />
+          </div>
+          <h3>App Smart fidelidade</h3>
+          <img src={IconBaixeAqui} alt='Ícone do Baixe Aqui' />
+        </div>
       </div>
 
-      <div>
+      <div className='social-media'>
         <h2>Redes sociais</h2>
         <div>
           <img src={LogoFacebook} alt='Logo do Facebook' />
@@ -90,7 +100,6 @@ export default function Footer() {
         <h3>App Smart fidelidade</h3>
         <img src={IconBaixeAqui} alt='Ícone do Baixe Aqui' />
       </div>
-
     </Container>
   )
 }

@@ -37,7 +37,7 @@ export function CardSlider({ products }: ProductsProps) {
       },
       800: {
         spaceBetween: 50,
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       990: {
         pagination: false,

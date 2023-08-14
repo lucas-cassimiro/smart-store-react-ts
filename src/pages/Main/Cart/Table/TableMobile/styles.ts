@@ -16,9 +16,12 @@ export const Container = styled.div`
     gap: 1.5rem;
 
     > div:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
-        width: 100%;
-        height: 100%;
+        width: 250px;
+        height: 310px;
         object-fit: cover;
         border-radius: 4px;
       }
